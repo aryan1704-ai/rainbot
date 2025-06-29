@@ -1,0 +1,361 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: "Gill Sans", sans-serif;
+}
+
+/* Preloader style */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Loader animation */
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #32aa27;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(90deg); }
+  50%{ transform: rotate(180deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
+#navbar {
+    height: 13vh;
+    width: 100vw;
+    background-color: rgb(48, 46, 46);
+    position: fixed;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    z-index: 10;
+}
+
+#logo {
+    height: 70%;
+    margin: 10%;
+}
+
+#logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+.texts {
+    margin: 25px;
+    color: white;
+}
+
+.texts a {
+    text-decoration: none;
+    color: white;
+}
+
+.texts:hover {
+    text-decoration-line: underline;
+    text-underline-offset: 5px;
+    font-weight: bold;
+}
+
+.btn {
+    color: white;
+    justify-content: center;
+    border: 2px solid white;
+    background-color: transparent;
+    padding: 8px 10px;
+    margin-left: 100px;
+}
+
+.btn a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn:hover {
+    font-weight: bold;
+    border-color: #32aa27;
+    background-color: #32aa27;
+}
+
+#fack-navbar {
+    height: 13vh;
+    width: 100vw;
+}
+
+/* Main Contain */
+#book-download {
+    background: linear-gradient(to bottom right, #e9fdf1, #f0fff5);
+    padding: 5% 8%;
+    text-align: center;
+}
+
+.download-container h2 {
+    color: #32aa27;
+    font-size: 36px;
+    margin-bottom: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.download-container p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #444;
+}
+
+.search-container {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#searchInput {
+    padding: 10px;
+    width: 300px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.search-container button {
+    background-color: #32aa27;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-container button:hover {
+    background-color: #2a9220;
+}
+
+.book-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.book-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    width: 280px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.book-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.2);
+}
+
+.book-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: fill;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.book-card h3 {
+    font-size: 20px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.book-card p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #32aa27;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 14px rgba(50, 170, 39, 0.3);
+}
+
+.download-btn:hover {
+    background-color: #2a9220;
+    transform: scale(1.05);
+}
+
+
+/* FOOTER */
+#footer {
+    height: 35vh;
+    width: 100vw;
+    background-color: rgb(48, 46, 46);
+    color: white;
+    padding: 40px 8%;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    margin-bottom: 10px;
+    color: #32aa27;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    margin-top: 30px;
+    text-align: center;
+    border-top: 1px solid #555;
+    padding-top: 20px;
+    color: #aaa;
+}
+
+/* Responsive Website Codes */
+@media only screen and (min-width: 318px) and (max-width: 768px){
+
+    #navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+        font-size: 16px;
+    }
+    #logo {
+        margin: 0 0 10px 0;
+        height: 60px;
+    }
+    .texts, .btn {
+        margin: 10px 0 0 0;
+    }
+    #fack-navbar {
+        height: 194px;
+    }
+
+    /* #book-download{} */
+
+    .download-container h2{
+        font-size: 24px;
+    }
+
+    .download-container p{
+        margin-bottom: 24px;
+    }
+
+    #searchInput{
+        width: 184px;
+    }
+
+    .search-container button{
+        font-weight: bolder;
+    }
+
+    /* Reduce footer size and stack sections for mobile */
+    #footer {
+        height: auto;
+        padding: 24px 4% 14px 4%;
+        font-size: 12px;
+    }
+    .footer-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .footer-section {
+        min-width: unset;
+        margin-bottom: 12px;
+    }
+    .footer-bottom {
+        margin-top: 14px;
+        padding-top: 7px;
+    }
+}
+
+@media only screen and (min-width: 767px) and (max-width:1024px){
+
+    #navbar{
+        width: 100%;
+        height: 15vh;
+    }
+
+    #fack-navbar{
+        width: 100%;
+        height: 15vh;
+    }
+
+    #logo img{
+        border-radius: 10px;
+        border: 2px solid white;
+    }
+
+    #book-download{
+        height: auto;
+    }
+
+    #footer{
+        height: fit-content;
+    }
+}
